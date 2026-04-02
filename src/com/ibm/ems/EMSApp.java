@@ -6,7 +6,7 @@ import com.ibm.ems.util.SalaryProcessor;
 
 import java.util.Scanner;
 
-// Main class - Entry point of the EMS application
+// Main class
 public class EMSApp {
 
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class EMSApp {
         Scanner scanner = new Scanner(System.in);
         EmployeeService service = new EmployeeService();
 
-        // Load saved data from file on startup
+        
         System.out.println("Loading employee data...");
         FileUtil.loadFromFile(service);
 

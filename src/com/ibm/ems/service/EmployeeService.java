@@ -8,15 +8,15 @@ import com.ibm.ems.model.PermanentEmployee;
 import java.util.ArrayList;
 import java.util.List;
 
-// Service class - handles all CRUD operations
+
 public class EmployeeService {
 
     // ArrayList to store all employees
     private List<Employee> employeeList = new ArrayList<>();
 
-    // -------------------------
-    // FR-01: Add Employee
-    // -------------------------
+    
+    // 1. Add Employee
+    
     public void addEmployee(int id, String name, double salary, String type) {
         Employee emp;
 
@@ -35,9 +35,9 @@ public class EmployeeService {
         employeeList.add(emp);
     }
 
-    // -------------------------
-    // FR-02: View All Employees
-    // -------------------------
+  
+    // 2. View All Employees
+   
     public void viewAllEmployees() {
         if (employeeList.isEmpty()) {
             System.out.println("No employees found.");
