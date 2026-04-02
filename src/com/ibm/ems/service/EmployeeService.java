@@ -27,7 +27,7 @@ public class EmployeeService {
         }
 
         employeeList.add(emp);
-        System.out.println("✅ Employee added successfully: " + name);
+        System.out.println("Employee added successfully: " + name);
     }
 
     // Also supports adding directly (used by FileUtil on load)
@@ -40,20 +40,20 @@ public class EmployeeService {
     // -------------------------
     public void viewAllEmployees() {
         if (employeeList.isEmpty()) {
-            System.out.println("⚠ No employees found.");
+            System.out.println("No employees found.");
             return;
         }
 
-        System.out.println("\n===== Employee List =====");
+        System.out.println("\n----- Employee List -----");
         for (Employee emp : employeeList) {
             emp.display();
         }
-        System.out.println("=========================\n");
+        System.out.println("-----------------\n");
     }
 
-    // -------------------------
-    // FR-03: Update Employee
-    // -------------------------
+    
+    // 3. Update Employee
+   
     public void updateEmployee(int id, String newName, double newSalary)
             throws EmployeeNotFoundException {
 
@@ -63,32 +63,32 @@ public class EmployeeService {
         System.out.println("Employee updated successfully.");
     }
 
-    // -------------------------
-    // FR-04: Delete Employee
-    // -------------------------
+    
+    // 4. Delete Employee
+    
     public void deleteEmployee(int id) throws EmployeeNotFoundException {
         Employee emp = findById(id); // throws exception if not found
         employeeList.remove(emp);
-        System.out.println("✅ Employee deleted successfully.");
+        System.out.println("Employee deleted successfully.");
     }
 
-    // -------------------------
-    // FR-07: Search Employee
-    // -------------------------
+    
+    // 7. Search Employee
+    
     public void searchById(int id) {
         try {
             Employee emp = findById(id);
-            System.out.println("\n===== Search Result =====");
+            System.out.println("\n------------ Search Result ----------");
             emp.display();
-            System.out.println("=========================\n");
+            System.out.println("----------------------\n");
         } catch (EmployeeNotFoundException e) {
-            System.out.println("❌ " + e.getMessage());
+            System.out.println("Wrong " + e.getMessage());
         }
     }
 
     public void searchByName(String name) {
         boolean found = false;
-        System.out.println("\n===== Search Results =====");
+        System.out.println("\n---------- Search Results ----------");
 
         for (Employee emp : employeeList) {
             if (emp.getName().equalsIgnoreCase(name)) {
@@ -100,19 +100,19 @@ public class EmployeeService {
         if (!found) {
             System.out.println("No employee found with name: " + name);
         }
-        System.out.println("==========================\n");
+        System.out.println("-------------\n");
     }
 
-    // -------------------------
-    // FR-06: Salary Calculation (display)
-    // -------------------------
+ 
+    // 6. Salary Calculation (display)
+    
     public void processSalary() {
         if (employeeList.isEmpty()) {
             System.out.println("No employees to process.");
             return;
         }
 
-        System.out.println("\n===== Salary Processing ");
+        System.out.println("\n-------Salary Processing ");
         for (Employee emp : employeeList) {
             System.out.println("Name: " + emp.getName() +
                     " | Calculated Salary: " + emp.calculateSalary());
@@ -120,9 +120,9 @@ public class EmployeeService {
         System.out.println("------------------\n");
     }
 
-    // -------------------------
+   
     // Helper: Find by ID
-    // -------------------------
+    
     private Employee findById(int id) throws EmployeeNotFoundException {
         for (Employee emp : employeeList) {
             if (emp.getId() == id) {
