@@ -34,8 +34,8 @@ public class Employee {
 
     // Display employee details
     public void display() {
-        System.out.println("ID: " + id + " | Name: " + name +
-                " | Salary: " + salary + " | Type: " + type);
+        System.out.println("ID: " + id + " Name: " + name +
+                " Salary: " + salary + " Type: " + type);
     }
 
     // Convert to file-saveable string

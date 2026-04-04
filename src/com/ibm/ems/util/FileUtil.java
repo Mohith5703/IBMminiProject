@@ -13,9 +13,9 @@ public class FileUtil {
 
     private static final String FILE_NAME = "employees.txt";
 
-    // -------------------------
-    // FR-09: Save to file
-    // -------------------------
+
+    // 9. Save to file
+
     public static void saveToFile(List<Employee> employees) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
 
@@ -25,22 +25,22 @@ public class FileUtil {
                 writer.newLine(); // new line for each employee
             }
 
-            System.out.println("✅ Data saved to " + FILE_NAME);
+            System.out.println("Data saved to " + FILE_NAME);
 
         } catch (IOException e) {
-            System.out.println("❌ Error saving file: " + e.getMessage());
+            System.out.println("Error saving file: " + e.getMessage());
         }
     }
 
-    // -------------------------
-    // FR-09: Load from file
-    // -------------------------
+
+    // 9.Load from file
+
     public static void loadFromFile(EmployeeService service) {
         File file = new File(FILE_NAME);
 
         // If file doesn't exist yet, skip loading
         if (!file.exists()) {
-            System.out.println("ℹ No saved data found. Starting fresh.");
+            System.out.println("No saved data found. Starting fresh.");
             return;
         }
 
@@ -69,10 +69,10 @@ public class FileUtil {
                 }
             }
 
-            System.out.println("✅ Data loaded from " + FILE_NAME);
+            System.out.println("Data loaded from " + FILE_NAME);
 
         } catch (IOException e) {
-            System.out.println("❌ Error loading file: " + e.getMessage());
+            System.out.println("Error loading file: " + e.getMessage());
         }
     }
 }

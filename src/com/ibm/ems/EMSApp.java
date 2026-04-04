@@ -22,7 +22,7 @@ public class EMSApp {
 
         do {
             // Display menu
-            System.out.println("\n========== IBM Employee Management System ==========");
+            System.out.println("\n-------- IBM Employee Management System ---------");
             System.out.println("1. Add Employee");
             System.out.println("2. View Employees");
             System.out.println("3. Update Employee");
@@ -31,7 +31,7 @@ public class EMSApp {
             System.out.println("6. Process Salary");
             System.out.println("7. Save Data");
             System.out.println("8. Exit");
-            System.out.println("====================================================");
+            System.out.println("----------------------------------------------");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
@@ -76,7 +76,7 @@ public class EMSApp {
                     try {
                         service.updateEmployee(updateId, newName, newSalary);
                     } catch (Exception e) {
-                        System.out.println("❌ " + e.getMessage());
+                        System.out.println("Wrong " + e.getMessage());
                     }
                     break;
 
@@ -88,7 +88,7 @@ public class EMSApp {
                     try {
                         service.deleteEmployee(deleteId);
                     } catch (Exception e) {
-                        System.out.println("❌ " + e.getMessage());
+                        System.out.println("Wrong " + e.getMessage());
                     }
                     break;
 
@@ -119,9 +119,9 @@ public class EMSApp {
                     break;
 
                 case 8: // Exit
-                    System.out.println("💾 Auto-saving before exit...");
+                    System.out.println(" Auto-saving before exit...");
                     FileUtil.saveToFile(service.getAllEmployees());
-                    System.out.println("👋 Goodbye! Thank you for using IBM EMS.");
+                    System.out.println("Goodbye! Thank you for using IBM EMS.");
                     break;
 
                 default:

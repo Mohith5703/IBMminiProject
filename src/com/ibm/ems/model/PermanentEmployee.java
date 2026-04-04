@@ -19,9 +19,9 @@ public class PermanentEmployee extends Employee {
     @Override
     public void display() {
         System.out.println("ID: " + getId() +
-                " | Name: " + getName() +
-                " | Base Salary: " + getSalary() +
-                " | Total (with 10% bonus): " + calculateSalary() +
-                " | Type: Permanent");
+                "Name: " + getName() +
+                "Base Salary: " + getSalary() +
+                "Total (with 10% bonus): " + calculateSalary() +
+                "Type: Permanent");
     }
 }

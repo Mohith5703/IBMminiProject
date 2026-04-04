@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-// FR-10: Multithreading - Process salary using threads
+// 10. Multithreading - Process salary using threads
 public class SalaryProcessor {
 
     // Each employee salary is processed in a separate thread
@@ -16,14 +16,14 @@ public class SalaryProcessor {
         List<Employee> employees = service.getAllEmployees();
 
         if (employees.isEmpty()) {
-            System.out.println("⚠ No employees to process.");
+            System.out.println("No employees to process.");
             return;
         }
 
         // Create a thread pool with 3 threads
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
-        System.out.println("\n===== Salary Processing (Multithreaded) =====");
+        System.out.println("\n------ Salary Processing (Multithreaded) ----------");
 
         for (Employee emp : employees) {
             // Each employee salary is processed in a Runnable thread

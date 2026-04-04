@@ -18,9 +18,9 @@ public class ContractEmployee extends Employee {
     @Override
     public void display() {
         System.out.println("ID: " + getId() +
-                " | Name: " + getName() +
-                " | Salary: " + getSalary() +
-                " | No Bonus" +
-                " | Type: Contract");
+                " Name: " + getName() +
+                " Salary: " + getSalary() +
+                " No Bonus" +
+                " Type: Contract");
     }
 }
