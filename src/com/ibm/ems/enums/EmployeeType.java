@@ -4,5 +4,7 @@ package com.ibm.ems.enums;
 public enum EmployeeType {
     PERMANENT,
     CONTRACT,
-    REGULAR
+    REGULAR,
+    Temporary,
+    SemiCONTRACT
 }
