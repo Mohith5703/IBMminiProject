@@ -20,6 +20,8 @@ public class EMSApp {
 
         int choice;
 
+        int i=1;
+
         do {
             // Display menu
             System.out.println("\n-------- IBM Employee Management System ---------");
