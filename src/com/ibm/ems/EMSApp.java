@@ -21,14 +21,6 @@ public class EMSApp {
         int choice;
 
         int i=1;
-        int i=2;
-
-
-
-        do {
-            // Display menu
-            System.out.println("\n-------- IBM Employee Management System ---------");
-            System.out.println("1. Add Employee");
             System.out.println("2. View Employees");
             System.out.println("3. Update Employee");
             System.out.println("4. Delete Employee");
