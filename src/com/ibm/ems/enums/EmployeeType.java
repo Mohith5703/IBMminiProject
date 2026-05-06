@@ -5,5 +5,6 @@ public enum EmployeeType {
     PERMANENT,
     CONTRACT,
     REGULAR,
-    Temporary
+    Temporary,
+    SemiCONTRACT
 }
